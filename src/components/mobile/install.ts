@@ -1,0 +1,11 @@
+import type {App} from 'vue'
+import Vant from 'vant'
+import BusinessForm from './BusinessForm.vue'
+import BusinessField from './BusinessField.vue'
+import SelectField from './SelectField.vue'
+import DateField from './DateField.vue'
+import MobileLoading from './MobileLoading.vue'
+import MobileNotice from './MobileNotice.vue'
+import MobilePopup from './MobilePopup.vue'
+import MobileSegments from './MobileSegments.vue'
+export function installMobile(app:App){app.use(Vant);for(const [name,component] of Object.entries({BusinessForm,BusinessField,SelectField,DateField,MobileLoading,MobileNotice,MobilePopup,MobileSegments}))app.component(name,component)}

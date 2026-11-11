@@ -1,0 +1,13 @@
+services:
+  h5:
+    build: .
+    ports:
+      - "127.0.0.1:9310:80"
+    volumes:
+      - ./public/config.json:/usr/share/nginx/html/handover-h5/config.json:ro
+    networks:
+      - cloud
+networks:
+  cloud:
+    external: true
+    name: ${CLOUD_DOCKER_NETWORK:-cloud}

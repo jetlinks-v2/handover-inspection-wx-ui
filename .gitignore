@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.dev/
+.env*
+!.env.example
+.agent-runtime/
+*.log
+.DS_Store
